@@ -1,23 +1,39 @@
 import csv
+import matplotlib.pyplot as plt
 
 def create_graph(filename):
 
     dates = []
     totals = []
+    count = 0
 
     # Read the CSV file
     with open(filename, 'r') as infile:
         reader = csv.reader(infile)
 
+        # Iterate through row and save one in every five entries
         for row in reader:
 
-            # Grab dates
-            date = row[0]
-            dates.append(date)
+            count+=1
 
-            # Grab the information in the last cell of the row
-            total = row[-1]
-            totals.append(total)
+            if count % 5 == 0:
+                # Grab dates -- first cell in the row
+                date = row[0]
+                dates.append(date)
+
+                # Grab the total balance -- last cell in the row
+                total = float(row[-1])
+                totals.append(total)
             
-    for i in range(0, len(dates)):
-        print(dates[i] + ' ' + totals[i])
+
+    # Create a basic line plot, format labels to look nice
+    plt.plot(dates, totals)
+    plt.gcf().autofmt_xdate()
+
+    # Add labels and title
+    plt.xlabel('Dates')
+    plt.ylabel('Total Balance')
+    plt.title('Total Balances Over All Time')
+
+    # Show the plot
+    plt.show()
