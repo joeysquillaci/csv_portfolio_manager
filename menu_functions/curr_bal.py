@@ -1,6 +1,6 @@
 import csv
 from colorama import *
-from helper_funcs.get_header import *
+from helper_functions.get_header import *
 
 def curr_bal(filename):
 

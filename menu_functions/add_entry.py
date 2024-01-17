@@ -1,7 +1,7 @@
 import csv
-from helper_funcs.get_header import *
-from helper_funcs.write_row import *
-from helper_funcs.compute_total import *
+from helper_functions.get_header import *
+from helper_functions.write_row import *
+from helper_functions.compute_total import *
 
 def add_entry(filename):
 
