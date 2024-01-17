@@ -7,5 +7,5 @@ Future iterations include creating graphs of data, analyzing data, removing entr
 File structure:
   - portfolio.py : main program
   - CSV : a folder to store test CSV data files
-  - menu_funcs : a folder containing external functions that can be called from the main menu
-  - helper_funcs : a folder containing external functions that assist in the primary menu function processes
+  - menu_functions : a folder containing external functions that can be called from the main menu
+  - helper_functions : a folder containing external functions that assist in the primary menu function processes
