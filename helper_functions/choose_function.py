@@ -1,5 +1,6 @@
 from menu_functions.read_csv import *
 from menu_functions.curr_bal import *
+from menu_functions.create_graph import *
 from menu_functions.add_entry import *
 
 def choose_function(choice, filename):
@@ -14,6 +15,7 @@ def choose_function(choice, filename):
 
     elif(choice == '3'):
         print("See graphs of balances over all time\n")
+        create_graph(filename)
 
     elif(choice == '4'):
         add_entry(filename)

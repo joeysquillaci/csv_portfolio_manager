@@ -2,7 +2,7 @@ def print_menu():
 
     print("[1] See current balances")
     print("[2] See full history of balances")
-    print("[3] See graphs of balances over all time")
+    print("[3] See graph of total balance over all time")
     print("[4] Add date entry")
     print("[x] Exit the program")
 
